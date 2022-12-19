@@ -1,0 +1,63 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+}
+#animation {
+  width: 500px;
+  height: 200px;
+  position: relative;
+
+}
+
+.car {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 200px;
+}
+
+.car1 {
+  left: 0;
+  z-index: 1;
+}
+
+.car2 {
+  right: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes moveCar1 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(1000px);
+  }
+}
+
+@keyframes moveCar2 {
+  from {
+    transform: translateX(1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.car1 {
+  animation: moveCar1 3s linear infinite;
+}
+
+.car2 {
+  animation: moveCar2 3s linear infinite;
+}
